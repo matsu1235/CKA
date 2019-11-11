@@ -146,6 +146,8 @@
 	* alias k=kubectl
 	* source <(kubectl completion bash) # completion will save a lot of time and avoid typo
 	* source <(kubectl completion bash | sed 's/kubectl/k/g' ) # so completion works with the alias "k"
+* etcdバックアップ
+	* ETCDCTL_API=3 etcdctl --endpoints https://[127.0.0.1]:2379 --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/etcd/healthcheck-client.crt --key=/etc/kubernetes/pki/etcd/healthcheck-client.key snapshot save /tmp/etcd-backup.db
 * リンク
 	* CKA-JP申込サイト
 		* https://training.linuxfoundation.org/certified-kubernetes-administrator-cka-jp/
